@@ -51,12 +51,10 @@ table {
 }
 
 button {
-  color: #02aab0 !important;
   text-transform: uppercase;
   outline: none;
   background: white;
   padding: 10px 20px;
-  border: 4px solid #02aab0 !important;
   border-radius: 10px;
   display: inline-block;
   transition: all 0.3s ease 0s;
@@ -174,10 +172,20 @@ tr .focus, tr .focus input {
 }
 
 .err, .err input {
-  background: #02aab0;
-  caret-color: #02aab0;
+  background: #ffcccb;
+  caret-color: #ffcccb;
 }
 
 .clue {
   color:#ff512f;
+}
+
+#clear button {
+  color: #02aab0;
+  border: 4px solid #02aab0;
+}
+
+#solve button {
+  color: #ca1f7b;
+  border: 4px solid #ca1f7b;
 }
