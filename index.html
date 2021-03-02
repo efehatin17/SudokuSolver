@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Sudoku Solver</title>
+    <link href='https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='sudoku.css'>
+    <script src='sudoku.js'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="row">
+      <div class="column">
+        <section id="table">
+          <table>
+            <tr>
+              <td class="assigning assigning_left"></td>
+              <td class="assigning">1</td>
+              <td class="assigning">2</td>
+              <td class="assigning assigning_right_middle">3</td>
+              <td class="assigning">4</td>
+              <td class="assigning">5</td>
+              <td class="assigning assigning_right_middle">6</td>
+              <td class="assigning">7</td>
+              <td class="assigning">8</td>
+              <td class="assigning assigning_right">9</td>
+            </tr>
+            <tr class="top">
+              <td class="assigning assigning_top">A</td>
+              <td class="box cluster_left cluster_top"><input type="text" id="11" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top"><input type="text" id="12" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_top"><input type="text" id="13" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top"><input type="text" id="14" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top"><input type="text" id="15" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_top"><input type="text" id="16" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top"><input type="text" id="17" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top"><input type="text" id="18" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right cluster_top"><input type="text" id="19" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td class="assigning">B</td>
+              <td class="box cluster_left"><input type="" id="21" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="22" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle"><input type="text" id="23" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="24" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="25" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle"><input type="text" id="26" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="27" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="28" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right"><input type="text" id="29" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td class="assigning assigning_bottom_middle">C</td>
+              <td class="box cluster_left cluster_bottom_middle"><input type="text" id="31" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="32" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_bottom_middle"><input type="text" id="33" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="34" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="35" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_bottom_middle"><input type="text" id="36" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="37" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="38" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right cluster_bottom_middle"><input type="text" id="39" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td class="assigning assigning_top_middle">D</td>
+              <td class="box cluster_left cluster_top_middle"><input type="text" id="41" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="42" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_top_middle"><input type="text" id="43" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="44" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="45" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_top_middle"><input type="text" id="46" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="47" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="48" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right cluster_top_middle"><input type="text" id="49" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td class="assigning">E</td>
+              <td class="box cluster_left"><input type="text" id="51" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="52" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle"><input type="text" id="53" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="54" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="55" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle"><input type="text" id="56" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="57" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="58" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right"><input type="text" id="59" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td class="assigning assigning_bottom_middle">F</td>
+              <td class="box cluster_left cluster_bottom_middle"><input type="text" id="61" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="62" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_bottom_middle"><input type="text" id="63" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="64" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="65" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_bottom_middle"><input type="text" id="66" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="67" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom_middle"><input type="text" id="68" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right cluster_bottom_middle"><input type="text" id="69" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td class="assigning assigning_top_middle">G</td>
+              <td class="box cluster_left cluster_top_middle"><input type="text" id="71" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="72" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_top_middle"><input type="text" id="73" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="74" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="75" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_top_middle"><input type="text" id="76" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="77" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_top_middle"><input type="text" id="78" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right cluster_top_middle"><input type="text" id="79" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td class="assigning">H</td>
+              <td class="box cluster_left"><input type="text" id="81" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="82" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle"><input type="text" id="83" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="84" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="85" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle"><input type="text" id="86" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="87" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box"><input type="text" id="88" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right"><input type="text" id="89" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+            <tr class="bottom">
+              <td class="assigning assigning_bottom">I</td>
+              <td class="box cluster_left cluster_bottom"><input type="text" id="91" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom"><input type="text" id="92" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_bottom"><input type="text" id="93" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom"><input type="text" id="94" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom"><input type="text" id="95" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right_middle cluster_bottom"><input type="text" id="96" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom"><input type="text" id="97" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_bottom"><input type="text" id="98" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+              <td class="box cluster_right cluster_bottom"><input type="text" id="99" pattern="[1-9]|.{0}" maxlength="1" autocomplete="off"></td>
+            </tr>
+          </table>
+          <div id="buttons">
+            <div id="solve"><button>Solve Sudoku!</button></div>
+            <div id="clear"><button>Clear</button></div>
+          </div>
+        </section>
+      </div>
+      <div class="column" id="text">
+        <p>Hey! Have you got stuck solving a Sudoku? Let me take a look at it.</p>
+        <div id="errorColumn"></div>
+      </div>
+    </div>
+  </body>
+</html>
